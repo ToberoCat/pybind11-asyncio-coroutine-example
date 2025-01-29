@@ -31,6 +31,24 @@ point for those looking to bridge C++ coroutines with Python’s asyncio.
 ✅ **Provides an async iterator directly callable in Python**  
 ✅ **Simple, minimal, and easily extendable**
 
+### 📝 Example
+
+```python
+import asyncio
+from asyncio_example import start_counter
+
+async def main():
+    task1 = start_counter(10)
+    task2 = start_counter(15)
+    
+    await task1
+    await task2
+
+asyncio.run(main())
+```
+
+This example demonstrates two concurrent counter coroutines running asynchronously.
+
 ## 🛠️ Prerequisites
 
 Ensure you have the following installed:
@@ -40,6 +58,13 @@ Ensure you have the following installed:
 - **CMake** (for building C++ extension)
 - **Ninja** (optional, for faster builds)
 - **Pybind11** (installed automatically)
+
+## 📥 Clone the Repository
+
+```bash
+git clone https://github.com/ToberoCat/pybind11-asyncio-coroutine-example.git --recursive
+cd pybind11-asyncio-coroutine-example
+```
 
 ## ⚡ Installation & Usage
 
