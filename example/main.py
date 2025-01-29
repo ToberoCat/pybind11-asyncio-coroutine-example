@@ -12,7 +12,7 @@ async def main():
     await task1
     await task2
     
-    await asyncio.sleep(5)
+    await asyncio.sleep(1)
     await myFunction("Coro4")
 
 asyncio.run(main())
