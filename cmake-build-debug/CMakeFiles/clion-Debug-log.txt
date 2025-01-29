@@ -1,4 +1,10 @@
-/home/tobias/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -DPython_EXECUTABLE=/home/tobias/Downloads/pybind11Asyncio/.venv/bin/python3 -DPython3_EXECUTABLE=/home/tobias/Downloads/pybind11Asyncio/.venv/bin/python3 -S /home/tobias/Downloads/pybind11Asyncio -B /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug
+/home/tobias/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -DPython_EXECUTABLE=/home/tobias/Downloads/pybind11-asyncio-coroutine-example/.venv/bin/python -DPython3_EXECUTABLE=/home/tobias/Downloads/pybind11-asyncio-coroutine-example/.venv/bin/python -S /home/tobias/Downloads/pybind11-asyncio-coroutine-example -B /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 CMake Deprecation Warning at pybind11/CMakeLists.txt:8 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
   CMake.
@@ -19,6 +25,17 @@ Call Stack (most recent call first):
   pybind11/CMakeLists.txt:200 (include)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Configuring done (0.1s)
+-- Found PythonInterp: /usr/bin/python3.12 (found version "3.12.3")
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.12.so
+-- Performing Test HAS_FLTO
+-- Performing Test HAS_FLTO - Success
+-- Configuring done (0.5s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    Python3_EXECUTABLE
+    Python_EXECUTABLE
+
+
+-- Build files have been written to: /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tobias/Downloads/pybind11Asyncio/pybind11
+# Install script for directory: /home/tobias/Downloads/pybind11-asyncio-coroutine-example/pybind11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

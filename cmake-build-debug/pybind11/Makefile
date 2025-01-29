@@ -57,10 +57,10 @@ RM = /home/tobias/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tobias/Downloads/pybind11Asyncio
+CMAKE_SOURCE_DIR = /home/tobias/Downloads/pybind11-asyncio-coroutine-example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug/CMakeFiles /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug/pybind11//CMakeFiles/progress.marks
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug/CMakeFiles 0
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug/CMakeFiles /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug/pybind11//CMakeFiles/progress.marks
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/clean
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/preinstall
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/preinstall
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tobias/Downloads/pybind11Asyncio/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tobias/Downloads/pybind11-asyncio-coroutine-example/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

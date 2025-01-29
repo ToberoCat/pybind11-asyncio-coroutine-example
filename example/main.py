@@ -3,28 +3,16 @@ import asyncio
 from asyncio_example import myFunction
 
 
-class AsyncIterable:
-    def __init__(self, iterable):
-        self._iterable = iterable
-
-    def __await__(self):
-        return self._run().__await__()
-
-    async def _run(self):
-        for _ in self._iterable:
-            await asyncio.sleep(0)
-
-
-def as_task(iterable):
-    return AsyncIterable(iterable)
-
-
 async def main():
-    it1 = as_task(myFunction())
-    it2 = as_task(myFunction())
-
-    await asyncio.gather(it1, it2)
-    print("Done")
-
+    task1 = myFunction("Coro1")
+    task2 = myFunction("Coro2")
+    
+    await myFunction("Coro3")
+    
+    await task1
+    await task2
+    
+    await asyncio.sleep(5)
+    await myFunction("Coro4")
 
 asyncio.run(main())
