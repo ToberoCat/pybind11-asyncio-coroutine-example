@@ -6,4 +6,4 @@ _generate/
 *.py[cod]
 *.egg-info
 *env*
-cmake-build-debug
+cmake-build-debug/
