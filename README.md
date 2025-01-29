@@ -1,75 +1,109 @@
-# Asyncio Coroutine Integration with Pybind11
+# 🚀 Asyncio Coroutine Integration with Pybind11
 
-This repository demonstrates a basic, albeit rough, implementation of integrating asyncio with C++ using Pybind11. It is
-a minimal example, not a comprehensive solution, but it provides a starting point for those looking to bridge C++
-coroutines with Python's asyncio.
+[![Language](https://img.shields.io/badge/language-C%2B%2B%2F%20Python-blue)](https://github.com/)
 
-I made this because after a few weeks of researching and trying out, I still haven't found a good and clean way of doing
-it, which would allow me to directly call my cpp function and use it with await.
+## 📝 Overview
 
-## Overview
+This repository provides a minimal yet functional demonstration of integrating **C++20 coroutines** with Python's *
+*asyncio** using **Pybind11**. The goal is to allow calling C++ coroutine functions directly and using them with `await`
+in Python.
 
-The example showcases how to create an iterator in C++ and expose it to Python as an asynchronous iterator. This allows
-the iterator to be awaited in Python, enabling integration with asyncio workflows.
+**Why this project?**  
+Despite extensive research, no clean and simple way to achieve this was found. This repository serves as a starting
+point for those looking to bridge C++ coroutines with Python’s asyncio.
 
-### Key Notes:
+## 📂 Project Structure
 
-- The example avoids threading, relying solely on coroutine-based execution.
-- The implementation is intentionally minimal and not optimized for production use.
-- The primary goal is to illustrate the concept, leaving further refinements to the user.
+```
+📦 asyncio-coroutine-pybind11
+├── src/
+│   └── main.cpp       # C++20 coroutine logic with Pybind11 bindings
+├── example/
+│   └── main.py        # Python example showcasing async iterator usage
+├── install.sh         # Script to install dependencies and build extension
+└── README.md          # Documentation
+```
 
-## Structure
+## 🔑 Features
 
-The repository includes:
+✅ **Bridges C++ coroutines with Python asyncio**  
+✅ **No threading—pure coroutine-based execution**  
+✅ **Provides an async iterator directly callable in Python**  
+✅ **Simple, minimal, and easily extendable**
 
-- A `main.cpp` file defining the C++ iterator and an example function that uses it.
-- A `main.py` file demonstrating how to use the wrapped C++ iterator as an asynchronous iterator in Python.
-- An `install.sh` script for setting up the example environment.
+## 🛠️ Prerequisites
 
-## Prerequisites
+Ensure you have the following installed:
 
-To run this example, you will need:
+- Python 3.7+ (with `venv` support)
+- A **C++17+ compiler** (e.g., `g++`, `clang`)
+- **CMake** (for building C++ extension)
+- **Ninja** (optional, for faster builds)
+- **Pybind11** (installed automatically)
 
-- Python with a virtual environment (venv) set up.
-- [CMake](https://cmake.org/) or [Ninja](https://ninja-build.org/) for building the C++ extension.
-- A compiler compatible with C++17 or later.
+## ⚡ Installation & Usage
 
-## Installation and Usage
+### 🔹 Step 1: Set up a Virtual Environment
 
-1. **Set up a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-2. **Install the example:**
-   Run the provided `install.sh` script to build and install the extension into your virtual environment:
-   ```bash
-   ./install.sh
-   ```
+### 🔹 Step 2: Install & Build the Extension
 
-3. **Run the Python example:**
-   With the virtual environment activated, execute the `main.py` script:
-   ```bash
-   python main.py
-   ```
+Run the provided install script:
 
-## Expected Output
+```bash
+./install.sh
+```
 
-The output will demonstrate the asynchronous behavior of the iterators, showing that both iterators run concurrently.
+### 🔹 Step 3: Run the Example
 
-## Limitations
+```bash
+python example/main.py
+```
 
-- This is a minimal proof-of-concept and is not production-ready.
-- Proper error handling, resource management, and advanced features are not implemented.
-- Users are encouraged to expand upon and refine this example based on their specific needs.
+## 📌 Expected Output
 
-## Contributing
+Running `main.py` will create two concurrent counter coroutines. The expected output should resemble:
 
-Contributions are welcome! If you have ideas for improvements or new features, feel free to submit a pull request or
-open an issue. Together, we can enhance this example and make it more robust for various use cases.
+```
+Yielding 0
+Yielding 1
+Yielding 2
+...
+Yielding 10
+Yielding 15
+```
 
----
+It demonstrates **asynchronous iteration** where Python's `asyncio` can await a C++ coroutine without blocking
+execution.
 
-This example provides a foundation for those looking to explore asyncio integration with C++ using Pybind11. While it is
-not comprehensive, it offers a starting point for further development.
+## ⚠️ Limitations
+
+🚧 **This is a Proof-of-Concept (PoC).**
+
+- Not optimized for production.
+- Error handling and resource management can be improved.
+- Further refinements and enhancements are encouraged.
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find a bug, have suggestions, or want to enhance functionality, feel free to:
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m "Add new feature"`)
+4. Push to your branch (`git push origin feature-name`)
+5. Open a **Pull Request**
+
+## 🔗 Resources
+
+- [Pybind11 Documentation](https://pybind11.readthedocs.io/en/stable/)
+- [C++ Coroutines](https://en.cppreference.com/w/cpp/coroutine)
+- [Asyncio in Python](https://docs.python.org/3/library/asyncio.html)
+
+This repository serves as a **starting point** for integrating **C++20 coroutines** with **Python asyncio** using *
+*Pybind11**. Feel free to explore, modify, and improve it as needed! 🚀  
+
