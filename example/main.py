@@ -1,18 +1,18 @@
 import asyncio
 
-from asyncio_example import myFunction
+from asyncio_example import start_counter
 
 
 async def main():
-    task1 = myFunction("Coro1")
-    task2 = myFunction("Coro2")
+    task1 = start_counter(10)
+    task2 = start_counter(15)
     
-    await myFunction("Coro3")
+    await start_counter(2)
     
     await task1
     await task2
     
     await asyncio.sleep(1)
-    await myFunction("Coro4")
+    await start_counter(5)
 
 asyncio.run(main())
